@@ -75,7 +75,7 @@ void Model::load_texture(std::string filename, const char *suffix, TGAImage &img
         texfile = texfile.substr(0,dot) + std::string(suffix);
         img.read_tga_file(texfile.c_str());
         std::cerr << "texture file " << texfile << " loading " << (img.read_tga_file(texfile.c_str()) ? "ok" : "failed") << std::endl;
-        //img.flip_vertically();
+        img.flip_vertically();
     }
 }
 

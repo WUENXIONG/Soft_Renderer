@@ -317,7 +317,7 @@ IShader::~IShader() {}
         float diff = std::max(0.f, n * light.normalize());//¼ÆËãÂþ·´ÉäÑÕÉ«
         TGAColor c = model->diffuse(uv);
        
-        for (int i = 0; i < 3; i++)color[i]=std::min<int>(5+c.bgra[i] , 255);
+        for (int i = 0; i < 3; i++)color[i]=std::min<int>(5+c[i]*(diff + 0.5*spec) , 255);
         return false;
     }
 

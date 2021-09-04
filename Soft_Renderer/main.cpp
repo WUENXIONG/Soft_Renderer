@@ -14,8 +14,8 @@
 
 
 //这是窗口的宽高
-const int WINDOW_WIDTH  = 1600;
-const int WINDOW_HEIGHT = 1200;
+const int WINDOW_WIDTH  = 1200;
+const int WINDOW_HEIGHT = 900;
 
 Vec3f     lg(0,0,1);
 
@@ -44,15 +44,17 @@ int main() {
     //变换后的关照，这里单位化是为了后面计算颜色方便
     lg = proj<3>((Projection*ModelView*embed<4>(lg, 0.f))).normalize();
     
-    int n = 7;//OBJ模型个数，然后把模型路径添加到下面
+    int n = 1;//OBJ模型个数，然后把模型路径添加到下面
     Model* model[]{
-     new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayiarmour1.obj"),
+    new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/gun/Cerberus.obj"),
+    //new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/gun/Cerberus2.obj")
+     /*new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayiarmour1.obj"),
      new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayiarmour2.obj"),
      new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayibody.obj"),
      new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayidecoration.obj"),
      new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayiface.obj"),
      new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayihair.obj"),
-     new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayisword.obj")
+     new Model("D:/VisualStudio_WorkSpace/SRender-master/obj/yayi/yayisword.obj")*/
     };
     
     PhongShader s ;
