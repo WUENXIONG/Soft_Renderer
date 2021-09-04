@@ -23,5 +23,5 @@
 阴影、天空盒、其他光照模型、LOD、多线程、动画    
 
 目前渲染效果：  
-![image](芽衣1.PNG) ![image](芽衣2.PNG)
-![image](gun.PNG)
+![image](image/芽衣1.PNG) ![image](image/芽衣2.PNG)
+![image](image/gun.PNG)
